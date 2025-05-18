@@ -39,7 +39,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <p className='text-gray-400'>&copy; 2025 Athul Krishna</p>
+     
 
     </div>
   );
