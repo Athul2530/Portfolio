@@ -39,10 +39,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Right Side */}
-        <p className="text-sm md:text-base text-center md:text-right">
-          &copy; {new Date().getFullYear()} Athul Krishna. All rights reserved.
-        </p>
+       
 
       </div>
     </footer>

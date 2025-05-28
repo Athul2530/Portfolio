@@ -72,16 +72,27 @@ const Hero = () => {
             transition={{ duration: 1, delay: 1.5 }}
             className="flex flex-row items-center gap-6 my-4 md:mb-0"
           >
-            <motion.button
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0px 0px 8px rgba(255, 0, 255, 0.8)",
-              }}
-              className="z-10 cursor-pointer font-bold text-gray-200 md:w-auto p-4 border
-                                     border-purple-400 rounded-xl hover:bg-purple-500 hover:text-white transition-all duration-300"
-            >
-              Download CV
-            </motion.button>
+            <motion.div
+  initial={{ opacity: 0, y: 50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 1, delay: 1.5 }}
+  className="flex flex-row items-center gap-6 my-4 md:mb-0"
+>
+  <a href="/MyCV.pdf" download>
+    <motion.button
+      whileHover={{
+        scale: 1.05,
+        boxShadow: "0px 0px 8px rgba(255, 0, 255, 0.8)",
+      }}
+      className="z-10 cursor-pointer font-bold text-gray-200 md:w-auto p-4 border
+                 border-purple-400 rounded-xl hover:bg-purple-500 hover:text-white transition-all duration-300"
+    >
+      Download CV
+    </motion.button>
+  </a>
+</motion.div>
+
 
             {/* Social Links */}
             <div className="flex gap-6 flex-row text-4xl md:text-6xl text-purple-400 z-20">
